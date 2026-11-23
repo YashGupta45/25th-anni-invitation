@@ -560,8 +560,8 @@ body.opened .snd{opacity:1;transform:none;pointer-events:auto}
 (function(){
 "use strict";
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
-const PHOTOS=["photos/01-side-by-side.jpg","photos/02-warm-evenings.jpg","photos/03-woven-together.jpg","photos/04-every-road.jpg","photos/05-still-turning-heads.jpg","photos/06-hand-in-hand.jpg"];
-const BG="photos/hero-bg.jpg";
+const PHOTOS=["01-side-by-side.jpg","02-warm-evenings.jpg","03-woven-together.jpg","04-every-road.jpg","05-still-turning-heads.jpg","06-hand-in-hand.jpg"];
+const BG="hero-bg.jpg";
 const MAPS="https://maps.google.com/?q=The+Crown,+Bhubaneswar+-+IHCL+SeleQtions,+Nayapalli,+Bhubaneswar";
 const DIR="https://www.google.com/maps/dir/?api=1&destination=The+Crown%2C+Bhubaneswar+-+IHCL+SeleQtions%2C+Nayapalli%2C+Bhubaneswar";
 const ADDRESS="The Taj Crown (The Crown, Bhubaneswar – IHCL SeleQtions), Nayapalli, Bhubaneswar, Odisha";
@@ -777,7 +777,7 @@ let audio=null,actx=null,gain=null,muted=false,started=false;
 function prepAudio(){
   return new Promise(res=>{
     try{
-      audio=new Audio();audio.src="audio/janam-janam.mp3";
+      audio=new Audio();audio.src="janam-janam.mp3";
       audio.loop=true;audio.preload="auto";audio.setAttribute("playsinline","");
       const done=()=>res();audio.addEventListener("loadedmetadata",done,{once:true});audio.addEventListener("error",done,{once:true});
       audio.load();setTimeout(done,2500);
